@@ -14,17 +14,17 @@ if (!empty($login) && !empty($password)) {
             switch ($user['role']) {
                 case '3': {
                         $admin = new Admin($user['name'], $user['surname']);
-                        $admin->adminwelcome();
+                        $admin->welcome();
                         break;
                     }
                 case '2': {
                         $manager = new Manager($user['name'], $user['surname']);
-                        $manager->managerwelcome();
+                        $manager->welcome();
                         break;
                     }
                 case '1': {
                         $client = new Client($user['name'], $user['surname']);
-                        $client->clientwelcome();
+                        $client->welcome();
                         break;
                     }
             }
