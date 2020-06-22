@@ -19,7 +19,7 @@ class User
 
 class Admin  extends User
 {
-    public function adminwelcome()
+    public function welcome()
     {
         echo parent::welcome() . "админ " . $this->name . " " . $this->surname . ". Вы можете на сайте делать всё.";
     }
@@ -27,7 +27,7 @@ class Admin  extends User
 
 class Client extends  User
 {
-    public function clientwelcome()
+    public function welcome()
     {
         echo parent::welcome() . "клиент " . $this->name . " " . $this->surname . ". Вы можете на сайте просматривать информацию доступную пользователям.";
     }
@@ -35,7 +35,7 @@ class Client extends  User
 
 class Manager  extends User
 {
-    public function managerwelcome()
+    public function welcome()
     {
         echo parent::welcome() . "менеджер " . $this->name . " " . $this->surname . ". Вы можете на сайте изменять, удалять и создавать клиентов.";
     }
