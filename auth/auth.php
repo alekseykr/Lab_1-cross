@@ -13,15 +13,15 @@ if (!empty($login) && !empty($password)) {
             $isAuth = true;
             switch ($user['role']) {
                 case '3': {
-                        $user = new Admin($user['name'], $user['surname']);
+                        $user = new Admin($user['name'], $user['surname'],$user['lang']);
                         break;
                     }
                 case '2': {
-                        $user = new Manager($user['name'], $user['surname']);
+                        $user = new Manager($user['name'], $user['surname'],$user['lang']);
                         break;
                     }
                 case '1': {
-                        $user = new Client($user['name'], $user['surname']);
+                        $user = new Client($user['name'], $user['surname'],$user['lang']);
                         break;
                     }
             }
