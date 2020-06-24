@@ -5,10 +5,11 @@ class User
     protected $name;
     protected $surname;
 
-    function __construct($name, $surname)
+    function __construct($name, $surname,$lang)
     {
         $this->name = $name;
         $this->surname = $surname;
+        $this->lang = $lang;
     }
 
     public function welcome()
